@@ -4,14 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <title>Укриття</title>
   </head>
   <body>
     <div class="container">
       <h1>Гра "Укриття"</h1>
-      <button onclick="generateCharacter()">Генерувати картку гравця</button>
+      <button class="button-generate" onclick="generateCharacter()">
+        Генерувати картку гравця
+      </button>
       <div id="characterCard"></div>
+      <div id="notesContainer">
+        <label for="notesInput">Нотатки:</label>
+        <input
+          type="text"
+          id="notesInput"
+          placeholder="Додайте свої нотатки..."
+        />
+      </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>

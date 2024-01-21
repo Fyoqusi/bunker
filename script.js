@@ -21,7 +21,7 @@ const professions = [
   "Офіціант",
   "Будівельник",
   "Клоун",
-  "Актор",
+  "Актор театру",
 ];
 const healths = [
   "Ідеальне здоров'я",
@@ -77,7 +77,7 @@ const facts = [
   "Знає 5 мов",
   "Залишався на другий рік в школі",
   "Вегетаріанець",
-  "Має власний гараж із колекцією ретро-автомобілів",
+  "Може з'їсти цілий кавун за 10 хвилин",
   "Має дві вищі освіти",
   "Грає у водне поло",
   "Співає в метро",
@@ -90,9 +90,39 @@ const facts = [
   "Отримав у спадок 1 мільйон доларів",
   "Вміє грати на гітарі",
   "Успішний блогер в Інстаграм",
-  "Читає сто книжок на рік",
-  'Знає "Кобзаря" напам\'ять',
+  "Практикується у віщуванні",
+  "Поцупив сирок з АТБ",
   "Знається на народній медицині",
+];
+const baggagelist = [
+  "Енциклопедія юного натураліста",
+  "Чіхуахуа",
+  "Компас",
+  "Ножиці",
+  "Карти",
+  "Молоток",
+  "Викрутка",
+  "Мультиінструмент",
+  "Насінинка пшениці",
+  "Телефон",
+  "Робот-пилосос",
+  "Шахи",
+  "Збірник 4500 анекдотів",
+  "Інструкція зі збирання крісла",
+  "Безлімітна картка",
+  "Турецький килим",
+  "Туалетний папір",
+  "Набір для в'язання",
+  "Парасолька",
+  "Ящик полуниці",
+  "Глобус",
+  "Лампочка",
+  "Подушка",
+  "Біблія",
+  "Фікус",
+  "Коробка патронів 5.56 мм",
+  "Лупа",
+  "Цегла",
 ];
 const actioncards = [
   "У цьому раунді ти не голосуєш, але голоси проти вибраного учасника подвоюються",
@@ -106,6 +136,7 @@ const actioncards = [
   "Дістань нову характеристику професії з колоди для вибраного гравця",
   "Дістань нову характеристику хобі з колоди для вибраного гравця",
   "Дістань нову характеристику факту з колоди для вибраного гравця",
+  "Наступного раунду примусь усіх гравців відкрити характеристику за твоїм бажанням",
 ];
 const phobias = [
   "Клаустрофобія (страх перед замкненим простором)",
@@ -131,6 +162,7 @@ const phobias = [
   "Термофобія (страх тепла або жару)",
   "Технофобія (страх технологій)",
   "Колібрифобія (страх колібрі)",
+  "Немає фобії",
 ];
 const conditions = [""];
 
@@ -150,6 +182,7 @@ function generateCharacter() {
   const phobia = getRandomElement(phobias);
   const hobby = getRandomElement(hobbies);
   const fact = getRandomElement(facts);
+  const baggage = getRandomElement(baggagelist);
   const condition = getRandomElement(conditions);
 
   const actionCard1 = [getRandomElement(actioncards)];
@@ -161,19 +194,31 @@ function generateCharacter() {
 
   const characterCard = `
         <h2>Характеристики гравця</h2>
-        <p><strong>Професія та стаж:</strong> ${profession}, ${experience} років</p>
-        <p><strong>Стать:</strong> ${gender}</p>
-        <p><strong>Вік:</strong> ${age}</p>
-        <p><strong>Стан Здоров'я:</strong> ${health}</p>
-        <p><strong>Фобія:</strong> ${phobia}</p>
-        <p><strong>Хобі:</strong> ${hobby}</p>
-        <p><strong>Факт:</strong> ${fact}</p>
-        <p><strong>Картки дії:</strong></p>
+        <p onclick="toggleDecoration(this)">&#128188; <strong>Професія та стаж:</strong> ${profession}, ${experience} років</p>
+        <p onclick="toggleDecoration(this)">&#9892; <strong>Стать:</strong> ${gender}</p>
+        <p onclick="toggleDecoration(this)">&#128339; <strong>Вік:</strong> ${age}</p>
+        <p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health}</p>
+        <p onclick="toggleDecoration(this)">&#128552; <strong>Фобія:</strong> ${phobia}</p>
+        <p onclick="toggleDecoration(this)">&#9917; <strong>Хобі:</strong> ${hobby}</p>
+        <p onclick="toggleDecoration(this)">&#129523; <strong>Багаж:</strong> ${baggage}</p>
+        <p onclick="toggleDecoration(this)">&#10071; <strong>Факт:</strong> ${fact}</p>
+        <p onclick="toggleDecoration(this)">&#9889; <strong>Картки дії:</strong></p>
         <ul>
-            <li>${actionCard1}</li>
-            <li>${actionCard2}</li>
+            <li onclick="toggleDecoration(this)">${actionCard1}</li>
+            <li onclick="toggleDecoration(this)">${actionCard2}</li>
         </ul>
     `;
 
   document.getElementById("characterCard").innerHTML = characterCard;
+}
+
+function toggleDecoration(paragraph) {
+  // Перевірка, чи вже є стиль line-through
+  if (paragraph.style.textDecorationLine === "line-through") {
+    // Якщо є, то видаляємо стиль
+    paragraph.style.textDecorationLine = "none";
+  } else {
+    // Інакше додаємо стиль
+    paragraph.style.textDecorationLine = "line-through";
+  }
 }
