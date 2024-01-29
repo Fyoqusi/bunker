@@ -4,14 +4,14 @@ const professions = [
   "Інженер-механік",
   "Вчитель фізкультури",
   "Архітектор",
-  "Кухар",
+  "Помічник кухаря",
   "Пілот",
   "Художник",
   "Програміст",
   "Медсестра",
   "Фермер",
   "Психолог",
-  "Бізнесмен",
+  "Снайпер",
   "Пожежник",
   "Астронавт",
   "Дизайнер",
@@ -22,6 +22,9 @@ const professions = [
   "Будівельник",
   "Клоун",
   "Актор театру",
+  "Нотаріус",
+  "Столяр",
+  "Безробітний",
 ];
 const healths = [
   "Ідеальне здоров'я",
@@ -69,6 +72,7 @@ const hobbies = [
   "Астрономія",
   "Громадська робота",
   "Колекціонування жуків",
+  "Сталкеринг",
 ];
 const facts = [
   "Пограбував власного дідуся",
@@ -177,8 +181,31 @@ function generateCharacter() {
   const profession = getRandomElement(professions);
   const gender = getRandomElement(genders);
   const age = Math.floor(Math.random() * 30) + 20; // Вік від 20 до 50 років
+  const lastDigitAge = age % 10;
+  let ageYears;
+
+  if (lastDigitAge === 1) {
+    ageYears = "рік";
+  } else if (lastDigitAge >= 2 && lastDigitAge <= 4) {
+    ageYears = "роки";
+  } else {
+    ageYears = "років";
+  }
   const experience = Math.floor(Math.random() * (age - 18 + 1)); // Стаж від нуля до різниці віку та вісімнадцяти
   const health = getRandomElement(healths);
+  const lastDigitExperience = experience % 10;
+  let ageExperience;
+
+  if (lastDigitExperience === 1) {
+    ageExperience = "рік";
+  } else if (
+    (lastDigitExperience >= 2 && lastDigitExperience <= 4 && experience < 11) ||
+    (lastDigitExperience >= 2 && lastDigitExperience <= 4 && experience > 14)
+  ) {
+    ageExperience = "роки";
+  } else {
+    ageExperience = "років";
+  }
   const phobia = getRandomElement(phobias);
   const hobby = getRandomElement(hobbies);
   const fact = getRandomElement(facts);
@@ -194,15 +221,14 @@ function generateCharacter() {
 
   const characterCard = `
         <h2>Характеристики гравця</h2>
-        <p onclick="toggleDecoration(this)">&#128188; <strong>Професія та стаж:</strong> ${profession}, ${experience} років</p>
-        <p onclick="toggleDecoration(this)">&#9892; <strong>Стать:</strong> ${gender}</p>
-        <p onclick="toggleDecoration(this)">&#128339; <strong>Вік:</strong> ${age}</p>
+        <p onclick="toggleDecoration(this)">&#128188; <strong>Професія та Стаж:</strong> ${profession}, ${experience} ${ageExperience}</p>
+        <p onclick="toggleDecoration(this)">&#9892; <strong>Стать та Вік:</strong> ${gender}, ${age} ${ageYears}</p>
         <p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health}</p>
         <p onclick="toggleDecoration(this)">&#128552; <strong>Фобія:</strong> ${phobia}</p>
         <p onclick="toggleDecoration(this)">&#9917; <strong>Хобі:</strong> ${hobby}</p>
         <p onclick="toggleDecoration(this)">&#129523; <strong>Багаж:</strong> ${baggage}</p>
         <p onclick="toggleDecoration(this)">&#10071; <strong>Факт:</strong> ${fact}</p>
-        <p onclick="toggleDecoration(this)">&#9889; <strong>Картки дії:</strong></p>
+        <p>&#9889; <strong>Картки дії:</strong></p>
         <ul>
             <li onclick="toggleDecoration(this)">${actionCard1}</li>
             <li onclick="toggleDecoration(this)">${actionCard2}</li>
