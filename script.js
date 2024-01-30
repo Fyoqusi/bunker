@@ -54,7 +54,7 @@ const hobbies = [
   "Малювання",
   "Фотографування",
   "Подорожі",
-  "Спорт",
+  "Футбол",
   "Грання на фортепіано",
   "Готування",
   "Гірські походи",
@@ -180,7 +180,7 @@ function getRandomElement(array) {
 function generateCharacter() {
   const profession = getRandomElement(professions);
   const gender = getRandomElement(genders);
-  const age = Math.floor(Math.random() * 30) + 20; // Вік від 20 до 50 років
+  const age = Math.floor(Math.random() * 50) + 18; // Вік від 18 до 68 років
   const lastDigitAge = age % 10;
   let ageYears;
 
@@ -221,13 +221,13 @@ function generateCharacter() {
 
   const characterCard = `
         <h2>Характеристики гравця</h2>
-        <p onclick="toggleDecoration(this)">&#128188; <strong>Професія та Стаж:</strong> ${profession}, ${experience} ${ageExperience}</p>
-        <p onclick="toggleDecoration(this)">&#9892; <strong>Стать та Вік:</strong> ${gender}, ${age} ${ageYears}</p>
-        <p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health}</p>
-        <p onclick="toggleDecoration(this)">&#128552; <strong>Фобія:</strong> ${phobia}</p>
-        <p onclick="toggleDecoration(this)">&#9917; <strong>Хобі:</strong> ${hobby}</p>
-        <p onclick="toggleDecoration(this)">&#129523; <strong>Багаж:</strong> ${baggage}</p>
-        <p onclick="toggleDecoration(this)">&#10071; <strong>Факт:</strong> ${fact}</p>
+        <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Професія та Стаж:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9892; <strong>Стать та Вік:</strong> ${gender}, ${age} ${ageYears}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#128552; <strong>Фобія:</strong> ${phobia}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Хобі:</strong> ${hobby} </p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#129523; <strong>Багаж:</strong> ${baggage}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10071; <strong>Факт:</strong> ${fact}</p></div>
         <p>&#9889; <strong>Картки дії:</strong></p>
         <ul>
             <li onclick="toggleDecoration(this)">${actionCard1}</li>
@@ -236,6 +236,7 @@ function generateCharacter() {
     `;
 
   document.getElementById("characterCard").innerHTML = characterCard;
+  document.querySelector(".button-generate").disabled = true;
 }
 
 function toggleDecoration(paragraph) {
