@@ -168,6 +168,7 @@ const phobias = [
   "Колібрифобія (страх колібрі)",
   "Немає фобії",
 ];
+const stages = ["Інкубація", "20%", "50%", "75%", "100%"];
 const conditions = [""];
 
 // Функція для генерації випадкового елемента з масиву
@@ -210,6 +211,7 @@ function generateCharacter() {
   const hobby = getRandomElement(hobbies);
   const fact = getRandomElement(facts);
   const baggage = getRandomElement(baggagelist);
+  const stage = getRandomElement(stages);
   const condition = getRandomElement(conditions);
 
   const actionCard1 = [getRandomElement(actioncards)];
@@ -223,7 +225,7 @@ function generateCharacter() {
         <h2>Характеристики гравця</h2>
         <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Професія та Стаж:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9892; <strong>Стать та Вік:</strong> ${gender}, ${age} ${ageYears}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health} ${stage} (якщо можна застосувати)</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#128552; <strong>Фобія:</strong> ${phobia}</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Хобі:</strong> ${hobby} </p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#129523; <strong>Багаж:</strong> ${baggage}</p></div>
