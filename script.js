@@ -211,7 +211,7 @@ function generateCharacter() {
     ageYears = "років";
   }
   const experience = Math.floor(Math.random() * (age - 18 + 1)); // Стаж від нуля до різниці віку та вісімнадцяти
-  const hobbyExperience = Math.floor(Math.random() * (age - 18 + 1)); // Стаж від нуля до різниці віку та вісімнадцяти
+  const hobbyExperience = Math.floor(Math.random() * (age - 14 + 1)); // Стаж від нуля до різниці віку та чотирнадцяти
   const health = getRandomElement(healths);
   const lastDigitExperience = experience % 10;
   let ageExperience;
