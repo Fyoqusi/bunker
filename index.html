@@ -1,59 +1,31 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <title>Укриття</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <title>Bunker</title>
   </head>
   <body>
-    <div class="language-buttons">
-      <a class="lang-btn" data-lang="en" href="indexen.html">
-        <img src="https://flagcdn.com/w40/us.png" alt="English" />
-        English
-      </a>
-      <a class="lang-btn" data-lang="uk" href="index.html">
-        <img src="https://flagcdn.com/w40/ua.png" alt="Українська" />
-        Українська
-      </a>
-    </div>
-    <div class="container">
-      <h1>Генератор характеристик</h1>
-      <button class="button-generate" onclick="generateCharacter()">
-        Генерувати картку гравця
-      </button>
-      <div id="characterCard"></div>
-      <div id="notesContainer">
-        <label for="notesInput">Нотатки:</label>
-        <input
-          type="text"
-          id="notesInput"
-          placeholder="Додайте свої нотатки..."
-        />
+    <div class="background"></div>
+    <div class="title">
+      <div>
+        <img src="images/bunker_logo.png" alt="Bunker" />
+      </div>
+      <div class="container">
+        <a href="https://fyoqusi.github.io/BunkerCard/uk" class="lang-btn">
+          <img src="https://flagcdn.com/w40/ua.png" alt="Українська" />
+          Українська
+        </a>
+        <a href="https://fyoqusi.github.io/BunkerCard/en" class="lang-btn">
+          <img src="https://flagcdn.com/w40/us.png" alt="English" />
+          English
+        </a>
         <p>
-          Ave Данило Чернов! <br />
-          Mono (типу подякувати можна): 4441111030475184
+          Ave Danylo Chernov! <br />
+          Support me by donating on: 4441111030475184
         </p>
       </div>
-    </div>
-    <div class="additional-container">
-      <a href="https://fyoqusi.github.io/BunkerCard/" class="additional-button">
-        <span><i class="fa fa-user" aria-hidden="true"></i> </span>
-      </a>
-      <a href="https://fyoqusi.github.io/BunkerGame/" class="additional-button">
-        <span><i class="fa fa-home"></i></span>
-      </a>
-      <a
-        href="https://fyoqusi.github.io/bunkerRegenerate/"
-        class="additional-button"
-      >
-        <span><i class="fa fa-refresh"></i></span>
-      </a>
     </div>
   </body>
 </html>
