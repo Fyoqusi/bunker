@@ -12,6 +12,7 @@ body {
   justify-content: center;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
 }
 
 .container {
@@ -184,6 +185,9 @@ ul {
 }
 
 .title {
+  width: 100%; /* Ширина на весь екран */
+  height: auto; /* Зберігає пропорції */
+  display: block;
   position: relative; /* Для переміщення за допомогою анімації */
   animation: moveUp 5s forwards; /* Викликаємо анімацію */
 }
@@ -218,4 +222,10 @@ ul {
   to {
     background-position: 0 360px; /* Зміщення вниз */
   }
+}
+
+.title-label {
+  width: 100%; /* Ширина на весь екран */
+  height: auto; /* Зберігає пропорції */
+  max-width: 702px;
 }
