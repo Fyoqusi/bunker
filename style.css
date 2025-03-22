@@ -211,6 +211,7 @@ ul {
   height: 100vh;
   z-index: -1;
   background-repeat: repeat-y; /* Повторення по вертикалі */
+  background-size: cover;
   animation: moveBackground 6s linear infinite; /* Анімація */
 }
 
@@ -220,7 +221,7 @@ ul {
     background-position: 0 0; /* Початкова позиція */
   }
   to {
-    background-position: 0 1080px; /* Зміщення вниз */
+    background-position: 0 100vh; /* Зміщення вниз */
   }
 }
 
