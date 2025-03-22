@@ -188,7 +188,7 @@ ul {
   height: auto; /* Зберігає пропорції */
   display: block;
   position: relative; /* Для переміщення за допомогою анімації */
-  animation: moveUp 5s forwards; /* Викликаємо анімацію */
+  animation: moveUp 3s forwards; /* Викликаємо анімацію */
 }
 
 /* Опис анімації */
