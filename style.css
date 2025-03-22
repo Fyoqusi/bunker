@@ -224,6 +224,11 @@ ul {
     background-position: 0 -10000vh; /* Зміщення вниз */
   }
 }
+@media (max-width: 768px) {
+  .background {
+    background-image: url("images/bgmobile.png"); /* Щоб уникнути обрізання */
+  }
+}
 
 .title-label {
   width: 100%; /* Ширина на весь екран */
