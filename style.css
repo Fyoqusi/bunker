@@ -16,7 +16,7 @@ body {
 
 .container {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 20px auto;
   margin-bottom: 20px;
   padding: 20px;
   background-color: #fff;
@@ -188,7 +188,7 @@ ul {
   height: auto; /* Зберігає пропорції */
   display: block;
   position: relative; /* Для переміщення за допомогою анімації */
-  animation: moveUp 3s forwards; /* Викликаємо анімацію */
+  animation: moveUp 5s forwards; /* Викликаємо анімацію */
 }
 
 /* Опис анімації */
@@ -202,6 +202,7 @@ ul {
 }
 
 .background {
+  background-position: center;
   background-image: url("images/bg.png"); /* Шлях до зображення */
   position: fixed; /* Фіксація на задньому плані */
   top: 0;
@@ -210,7 +211,7 @@ ul {
   height: 100vh;
   z-index: -1;
   background-repeat: repeat-y; /* Повторення по вертикалі */
-  animation: moveBackground 2s linear infinite; /* Анімація */
+  animation: moveBackground 6s linear infinite; /* Анімація */
 }
 
 /* Анімація */
@@ -219,7 +220,7 @@ ul {
     background-position: 0 0; /* Початкова позиція */
   }
   to {
-    background-position: 0 360px; /* Зміщення вниз */
+    background-position: 0 1080px; /* Зміщення вниз */
   }
 }
 
