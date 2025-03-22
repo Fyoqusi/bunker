@@ -221,7 +221,7 @@ ul {
     background-position: 0 0; /* Початкова позиція */
   }
   to {
-    background-position: 0 10000vh; /* Зміщення вниз */
+    background-position: 0 -10000vh; /* Зміщення вниз */
   }
 }
 
