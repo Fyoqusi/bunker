@@ -241,11 +241,11 @@ function generateCharacter() {
 
   const characterCard = `
         <h2>Характеристики гравця</h2>
-        <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Професія та Стаж:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9892; <strong>Стать та Вік:</strong> ${gender}, ${age} ${ageYears}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Стан Здоров'я:</strong> ${health}, ${stage} (якщо можна застосувати)</p></div>
+        <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Професія:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9892; <strong>Стать та вік:</strong> ${gender}, ${age} ${ageYears}</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Здоров'я:</strong> ${health}, ${stage} (якщо можна застосувати)</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#128552; <strong>Фобія:</strong> ${phobia}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Хобі та Стаж:</strong> ${hobby}, ${hobbyExperience} р.</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Хобі:</strong> ${hobby}, ${hobbyExperience} р.</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#129523; <strong>Багаж:</strong> ${baggage}</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10071; <strong>Факт:</strong> ${fact}</p></div>
         <p>&#9889; <strong>Картки дії:</strong></p>

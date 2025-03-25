@@ -232,11 +232,11 @@ function generateCharacter() {
 
   const characterCard = `
         <h2>Player's characteristic</h2>
-        <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Job and Experience:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
+        <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Job:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9892; <strong>Gender and Age:</strong> ${gender}, ${age} ${ageYears}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Health Condition:</strong> ${health}, ${stage} (if can be applied)</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Health:</strong> ${health}, ${stage} (if can be applied)</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#128552; <strong>Phobia:</strong> ${phobia}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Hobby and Experience:</strong> ${hobby}, ${hobbyExperience} y.</p></div>
+        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Hobby:</strong> ${hobby}, ${hobbyExperience} y.</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#129523; <strong>Baggage:</strong> ${baggage}</p></div>
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10071; <strong>Fact:</strong> ${fact}</p></div>
         <p>&#9889; <strong>Action cards:</strong></p>
