@@ -250,8 +250,8 @@ function generateCharacter() {
         <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10071; <strong>Факт:</strong> ${fact}</p></div>
         <p>&#9889; <strong>Картки дії:</strong></p>
         <ul>
-            <li onclick="toggleDecoration(this)">${actionCard1}</li>
-            <li onclick="toggleDecoration(this)">${actionCard2}</li>
+            <li onclick="toggleDecoration(this)" class="actionCards">${actionCard1}</li>
+            <li onclick="toggleDecoration(this)" class="actionCards">${actionCard2}</li>
         </ul>
     `;
 
