@@ -185,7 +185,7 @@ const phobias = [
   "Colibriphobia (fear of hummingbirds)",
   "No Phobia",
 ];
-const stages = ["Incubation period", "20%", "50%", "75%", "100%"];
+const stages = ["40%", "20%", "60%", "80%", "100%"];
 const conditions = [""];
 
 // Функція для генерації випадкового елемента з масиву
