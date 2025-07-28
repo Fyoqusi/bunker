@@ -3,10 +3,8 @@
   src: url(Sakana.ttf);
 }
 
-* {
-  font-family: sakana;
-}
 body {
+  font-family: sakana;
   font-size: 24px;
   text-align: center;
   background-image: url(images/duskBG2.png);
@@ -28,6 +26,9 @@ html,
 body {
   height: 100%;
   overscroll-behavior: none;
+}
+#title-container {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -222,7 +223,7 @@ ul {
     top: 30vh; /* Початкова позиція */
   }
   to {
-    top: 10vh; /* Кінцева позиція */
+    top: 0vh; /* Кінцева позиція */
   }
 }
 
