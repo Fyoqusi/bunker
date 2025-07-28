@@ -196,6 +196,10 @@ function getRandomElement(array) {
 
 // Функція для генерації картки гравця
 function generateCharacter() {
+  var button = document.querySelector(".button-generate");
+  button.style.display = "none";
+  var notes = document.querySelector("#notesContainer");
+  notes.style.display = "block";
   const profession = getRandomElement(professions);
   const gender = getRandomElement(genders);
   const age = Math.floor(Math.random() * 50) + 18; // Вік від 18 до 68 років
@@ -231,15 +235,15 @@ function generateCharacter() {
   } while (actionCard2 == actionCard1);
 
   const characterCard = `
-        <h2>Player's characteristic</h2>
-        <div class="charwithbutton"><p class="professionpar" onclick="toggleDecoration(this)">&#128188; <strong>Job:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9892; <strong>Gender and Age:</strong> ${gender}, ${age} ${ageYears}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10084; <strong>Health:</strong> ${health}, ${stage} (if can be applied)</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#128552; <strong>Phobia:</strong> ${phobia}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#9917; <strong>Hobby:</strong> ${hobby}, ${hobbyExperience} y.</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#129523; <strong>Baggage:</strong> ${baggage}</p></div>
-        <div class="charwithbutton"><p onclick="toggleDecoration(this)">&#10071; <strong>Fact:</strong> ${fact}</p></div>
-        <p>&#9889; <strong>Action cards:</strong></p>
+        <h2>Player's characteristics</h2>
+        <div class="charwithbutton"><span>&#128188;</span><p class="professionpar" onclick="toggleDecoration(this)"> <strong>Job:</strong> ${profession}, ${experience} ${ageExperience}</p></div>
+        <div class="charwithbutton"><span>&#9892;</span><p onclick="toggleDecoration(this)"> <strong>Gender and Age:</strong> ${gender}, ${age} ${ageYears}</p></div>
+        <div class="charwithbutton"><span>&#10084;</span><p onclick="toggleDecoration(this)"> <strong>Health:</strong> ${health}, ${stage} (if can be applied)</p></div>
+        <div class="charwithbutton"><span>&#128552;</span><p onclick="toggleDecoration(this)"> <strong>Phobia:</strong> ${phobia}</p></div>
+        <div class="charwithbutton"><span>&#9917;</span><p onclick="toggleDecoration(this)"> <strong>Hobby:</strong> ${hobby}, ${hobbyExperience} y.</p></div>
+        <div class="charwithbutton"><span>&#129523;</span><p onclick="toggleDecoration(this)"> <strong>Baggage:</strong> ${baggage}</p></div>
+        <div class="charwithbutton"><span>&#10071;</span><p onclick="toggleDecoration(this)"> <strong>Fact:</strong> ${fact}</p></div>
+        <h3>&#9889; <strong>Action cards:</strong></h3>
         <ul>
             <li onclick="toggleDecoration(this)" class="actionCards">${actionCard1}</li>
             <li onclick="toggleDecoration(this)" class="actionCards">${actionCard2}</li>
@@ -247,14 +251,15 @@ function generateCharacter() {
     `;
 
   document.getElementById("characterCard").innerHTML = characterCard;
-  document.querySelector(".button-generate").disabled = true;
+  const htmlEl = document.documentElement;
+  htmlEl.style.height = "auto";
 }
 
 function toggleDecoration(paragraph) {
   // Перевірка, чи вже є стиль line-through
   if (paragraph.style.textDecorationLine === "line-through") {
     // Якщо є, то видаляємо стиль
-    paragraph.style.textDecorationLine = "none";
+    paragraph.style.textDecorationLine = "underline";
   } else {
     // Інакше додаємо стиль
     paragraph.style.textDecorationLine = "line-through";
