@@ -7,7 +7,7 @@ body {
   font-family: sakana;
   font-size: 18px;
   text-align: center;
-  background-image: url(images/duskBG2.png);
+  background-image: url(images/citybg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -44,7 +44,6 @@ body {
 
 p {
   margin: 10px;
-  text-decoration: underline blue 3px;
   text-shadow: 0 0 3px #4d4dff;
 }
 
@@ -108,7 +107,7 @@ button {
 ul {
   text-align: left;
   padding-left: 20px;
-  text-decoration: underline blue 3px;
+  text-decoration: underline blue 1px;
   text-shadow: 0 0 3px #4d4dff;
 }
 
@@ -269,4 +268,3 @@ ul {
 .actionCards {
   margin: 10px;
 }
-
