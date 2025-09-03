@@ -52,6 +52,9 @@ p {
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
+  background-color: #000000c0;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .additional-button {
