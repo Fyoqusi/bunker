@@ -1,4 +1,3 @@
-// Фіктивний список характеристик
 const professions = [
   "Лікар-хірург",
   "Інженер-механік",
@@ -261,7 +260,6 @@ function generateCharacter() {
 
   document.getElementById("characterCard").innerHTML = characterCard;
   const htmlEl = document.documentElement;
-  htmlEl.style.height = "auto";
 }
 
 function toggleDecoration(paragraph) {
