@@ -3,6 +3,10 @@
   src: url(Sakana.ttf);
 }
 
+html {
+  overscroll-behavior: none;
+}
+
 body {
   font-family: sakana;
   font-size: 18px;
@@ -20,7 +24,6 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  overscroll-behavior: none;
 }
 
 #title-container {
