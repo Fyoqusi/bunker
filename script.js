@@ -260,13 +260,14 @@ function generateCharacter() {
 
   document.getElementById("characterCard").innerHTML = characterCard;
   const htmlEl = document.documentElement;
+  htmlEl.style.height = "auto";
 }
 
 function toggleDecoration(paragraph) {
   // Перевірка, чи вже є стиль line-through
   if (paragraph.style.textDecorationLine === "line-through") {
     // Якщо є, то видаляємо стиль
-    paragraph.style.textDecorationLine = "underline";
+    paragraph.style.textDecorationLine = "none";
   } else {
     // Інакше додаємо стиль
     paragraph.style.textDecorationLine = "line-through";
