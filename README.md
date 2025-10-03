@@ -1,2 +1,2 @@
-# BunkerCard
-Генератор карток характеристики персонажів для гри "Укриття"
+# bunker
+A player's characteristics generator for the game "Bunker"
