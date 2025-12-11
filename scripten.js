@@ -34,6 +34,13 @@ const professions = [
   "Lumberjack",
   "Bouncer",
   "Priest",
+  "Santa Claus Cosplayer",
+  "Christmas Elf",
+  "Woodcarver",
+  "Toy Store Worker",
+  "Reindeer Handler",
+  "Choirmaster",
+  "Wet Bandit",
 ];
 const healths = [
   "Perfect Health",
@@ -63,6 +70,7 @@ const healths = [
   "Schizophrenia",
   "Bipolar Disorder",
   "Total Blindness",
+  "Christmas Allergy",
 ];
 const genders = ["Male", "Female"];
 const hobbies = [
@@ -91,6 +99,9 @@ const hobbies = [
   "Drawing",
   "Programming",
   "Hobby Horsing",
+  "Woodcarving",
+  "Gift Wrapping",
+  "Reindeer Riding",
 ];
 const facts = [
   "Robbed His Own Grandfather",
@@ -108,13 +119,14 @@ const facts = [
   "Practices Fortune Telling",
   "Stole a Yogurt from Store",
   "Knowledgeable in Traditional Medicine",
-  "Neo-Nazist",
   "Acquainted with the President",
   "Doesn't Wear Underwear",
   "Completed First Aid Training",
   "Partially Responsible for the Catastrophe",
   "Survived in a road accident",
   "Has Been Married Three Times",
+  "Waits for random people under mistletoe",
+  "Saved elves from slavery",
 ];
 const baggagelist = [
   "Young Naturalist's Encyclopedia",
@@ -142,6 +154,11 @@ const baggagelist = [
   "Box of 5.56mm Cartridges",
   "Brick",
   "Mouse Poison",
+  "Secret Gift",
+  "Candy Cane",
+  "Santa Costume",
+  "Elf Costume",
+  "Crowbar",
 ];
 const actioncards = [
   "In this round, you do not vote, but the votes against the chosen player are doubled",
@@ -182,6 +199,11 @@ const phobias = [
   "Thermophobia (fear of heat or warmth)",
   "Technophobia (fear of technology)",
   "Colibriphobia (fear of hummingbirds)",
+  "Frigophobia (fear of becoming too cold)",
+  "Santaphobia (fear of Santa Claus)",
+  "Tarandophobia (fear of reindeer)",
+  "Chionophobia (fear of snow)",
+  "Fayophobia (fear of elves)",
   "No Phobia",
 ];
 const stages = ["40%", "20%", "60%", "80%", "100%"];
@@ -239,7 +261,7 @@ function generateCharacter() {
         <div class="charwithbutton"><span>&#9892;</span><p onclick="toggleDecoration(this)"> <strong>Gender and Age:</strong> ${gender}, ${age} ${ageYears}</p></div>
         <div class="charwithbutton"><span>&#10084;</span><p onclick="toggleDecoration(this)"> <strong>Health:</strong> ${health}, ${stage} (if can be applied)</p></div>
         <div class="charwithbutton"><span>&#128552;</span><p onclick="toggleDecoration(this)"> <strong>Phobia:</strong> ${phobia}</p></div>
-        <div class="charwithbutton"><span>&#9917;</span><p onclick="toggleDecoration(this)"> <strong>Hobby:</strong> ${hobby}, ${hobbyExperience} y.</p></div>
+        <div class="charwithbutton"><span>&#9917;</span><p onclick="toggleDecoration(this)"> <strong>Hobby:</strong> ${hobby}, ${hobbyExperience} years</p></div>
         <div class="charwithbutton"><span>&#129523;</span><p onclick="toggleDecoration(this)"> <strong>Baggage:</strong> ${baggage}</p></div>
         <div class="charwithbutton"><span>&#10071;</span><p onclick="toggleDecoration(this)"> <strong>Fact:</strong> ${fact}</p></div>
         <h3>&#9889; <strong>Action cards:</strong></h3>
