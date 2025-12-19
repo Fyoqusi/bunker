@@ -34,13 +34,6 @@ const professions = [
   "Lumberjack",
   "Bouncer",
   "Priest",
-  "Santa Claus Cosplayer",
-  "Christmas Elf",
-  "Woodcarver",
-  "Toy Store Worker",
-  "Reindeer Handler",
-  "Choirmaster",
-  "Wet Bandit",
 ];
 const healths = [
   "Perfect Health",
@@ -70,7 +63,6 @@ const healths = [
   "Schizophrenia",
   "Bipolar Disorder",
   "Total Blindness",
-  "Christmas Allergy",
 ];
 const genders = ["Male", "Female"];
 const hobbies = [
@@ -100,8 +92,6 @@ const hobbies = [
   "Programming",
   "Hobby Horsing",
   "Woodcarving",
-  "Gift Wrapping",
-  "Reindeer Riding",
 ];
 const facts = [
   "Robbed His Own Grandfather",
@@ -125,8 +115,6 @@ const facts = [
   "Partially Responsible for the Catastrophe",
   "Survived in a road accident",
   "Has Been Married Three Times",
-  "Waits for random people under mistletoe",
-  "Saved elves from slavery",
 ];
 const baggagelist = [
   "Young Naturalist's Encyclopedia",
@@ -154,10 +142,6 @@ const baggagelist = [
   "Box of 5.56mm Cartridges",
   "Brick",
   "Mouse Poison",
-  "Secret Gift",
-  "Candy Cane",
-  "Santa Costume",
-  "Elf Costume",
   "Crowbar",
 ];
 const actioncards = [
@@ -199,11 +183,6 @@ const phobias = [
   "Thermophobia (fear of heat or warmth)",
   "Technophobia (fear of technology)",
   "Colibriphobia (fear of hummingbirds)",
-  "Frigophobia (fear of becoming too cold)",
-  "Santaphobia (fear of Santa Claus)",
-  "Tarandophobia (fear of reindeer)",
-  "Chionophobia (fear of snow)",
-  "Fayophobia (fear of elves)",
   "No Phobia",
 ];
 const stages = ["40%", "20%", "60%", "80%", "100%"];
